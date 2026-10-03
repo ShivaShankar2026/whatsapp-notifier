@@ -1,0 +1,35 @@
+# Environment & secrets
+.env
+*.env
+!.env.example
+
+# SQLite local database (contains real data)
+backend/database/local.db
+*.db
+*.sqlite3
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+venv/
+.venv/
+env/
+
+# Node
+node_modules/
+dist/
+frontend/.vite/
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

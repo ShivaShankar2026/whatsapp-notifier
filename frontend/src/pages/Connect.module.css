@@ -1,0 +1,58 @@
+.statusBar {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 10px; padding: 12px 18px; margin-bottom: 20px;
+}
+.statusDot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.statusText { flex: 1; font-size: 13px; font-weight: 500; }
+.refreshBtn {
+  background: transparent; border: 1px solid var(--border);
+  color: var(--fg2); border-radius: 6px; padding: 4px 10px;
+  font-size: 12px;
+}
+.refreshBtn:hover { color: var(--fg); border-color: var(--fg2); }
+
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 680px) { .grid { grid-template-columns: 1fr; } }
+
+.qrWrap { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 10px 0; }
+.qrImg { width: 220px; height: 220px; border-radius: 12px; border: 3px solid var(--accent); background: #fff; }
+.qrHint { font-size: 13px; color: var(--fg2); text-align: center; }
+.qrRefresh { font-size: 11px; color: var(--fg3); }
+
+.noQr { display: flex; flex-direction: column; align-items: center; padding: 30px 0; gap: 12px; }
+
+.connected { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 24px 0; }
+.connectedIcon { font-size: 48px; }
+.connectedText { font-size: 16px; font-weight: 600; color: var(--accent); }
+.connectedSub { font-size: 12px; color: var(--fg2); }
+.dangerBtn {
+  margin-top: 8px; background: transparent;
+  border: 1px solid var(--danger); color: var(--danger);
+  border-radius: 8px; padding: 8px 18px; font-size: 13px; font-weight: 500;
+}
+.dangerBtn:hover { background: color-mix(in srgb, var(--danger) 12%, transparent); }
+
+.errorBox {
+  background: color-mix(in srgb, var(--danger) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--danger) 30%, transparent);
+  border-radius: 12px; padding: 20px; margin-bottom: 20px;
+}
+.errorTitle { font-weight: 600; color: var(--danger); margin-bottom: 6px; }
+.code {
+  display: block; margin-top: 8px;
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 6px; padding: 10px 12px;
+  font-family: var(--mono); font-size: 12px; color: var(--accent);
+  word-break: break-all;
+}
+
+.steps { display: flex; flex-direction: column; gap: 8px; }
+.step { display: flex; align-items: flex-start; gap: 10px; }
+.stepNum {
+  width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0;
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  color: var(--accent); font-size: 11px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.stepText { font-size: 12px; color: var(--fg2); padding-top: 3px; }
